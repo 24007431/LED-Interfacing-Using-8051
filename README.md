@@ -28,8 +28,29 @@ o	Ground (GND) connection
 
 
 ## Program:
+```
+#include<reg51.h>
+void main()
+{
+unsigned char x,y;
+unsigned int i;
+P1=0x00;//output configuration 
+while(1)
+	{
+	x=0x01; 
+	for(y=0;y<8;y++)	
+			{
+				P1=x;
+				for(i=0;i<60000;i++);
+				x=x<<1;
+			}
+		}
+	}
+```
 
 ## Output:
+<img width="1744" height="1140" alt="image" src="https://github.com/user-attachments/assets/40f6d02f-7e72-4336-b54b-bb28bc63eb97" />
+
 
 
 ## Result:
